@@ -1,7 +1,6 @@
 import Link from "next/link";
-
-import Container from "@/components/common/container";
 import { navigation } from "@/constants/navigation";
+import Container from "@/components/Container";
 
 export default function Navbar() {
   return (
