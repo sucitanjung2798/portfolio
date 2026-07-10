@@ -65,7 +65,7 @@ export const projects: Project[] = [
     image: HrisBanner,
     company: "Bisa Group",
     period: "Jun 2023 – Nov 2023",
-    featured: false,
+    featured: true,
     technologies: [
       "React",
       "Next.js",
@@ -108,7 +108,7 @@ export const projects: Project[] = [
     image: HrisBanner,
     company: "Bisa Group",
     period: "Jan 2023 – May 2023",
-    featured: false,
+    featured: true,
     technologies: [
       "React",
       "Next.js",

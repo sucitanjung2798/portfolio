@@ -2,7 +2,7 @@ import type { Profile } from "@/types/profile";
 
 export const profile: Profile = {
   name: "Suci R. Tanjung",
-  role: "Frontend Engineer",
+  role: "Frontend Developer",
   tagline:
     "Building scalable web applications that solve real business problems.",
   description:

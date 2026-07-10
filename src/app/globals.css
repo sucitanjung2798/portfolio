@@ -2,7 +2,8 @@
 
 :root {
   /* Background */
-  --background: #fafaf9;
+  --background: #F7FAFF;
+  --background-soft: #EDF4FF
   --surface: #ffffff;
 
   /* Text */
@@ -47,7 +48,7 @@ html {
 }
 
 body {
-  background: var(--background);
+  background: var(--background-soft);
   color: var(--foreground);
   font-family: var(--font-geist-sans), sans-serif;
 }
