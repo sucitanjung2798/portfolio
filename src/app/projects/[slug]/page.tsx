@@ -1,6 +1,4 @@
 import { notFound } from "next/navigation";
-
-import { projects } from "@/data/projects";
 import {
   CaseStudyHero,
   CaseStudySection,
@@ -8,6 +6,7 @@ import {
   ChallengesList,
   ImpactList,
 } from "@/components/case-study";
+import { projects } from "@/data/projects";
 
 type Props = {
   params: Promise<{
