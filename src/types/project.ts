@@ -13,6 +13,8 @@ export interface Project {
   period: string;
   description: string;
   image: StaticImageData;
+  duration: string
+  projectType: string
 
   featured: boolean;
 
@@ -29,4 +31,5 @@ export interface Project {
   businessImpact: string[];
   role: string;
   team: string;
+  images: StaticImageData[]
 }

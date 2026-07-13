@@ -10,7 +10,7 @@ export default function ProjectFilter({
   onChange,
 }: ProjectFilterProps) {
   return (
-    <div className="mt-12 flex flex-wrap gap-3">
+    <div className="mt-4 flex flex-wrap gap-3">
       {categories.map((category) => (
         <button
           key={category}

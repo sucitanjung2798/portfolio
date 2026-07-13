@@ -6,7 +6,7 @@ export const profile: Profile = {
   tagline:
     "Building scalable web applications that solve real business problems.",
   description:
-    "Nearly 4 years of experience building enterprise applications using React.js, Next.js, TypeScript, and modern frontend technologies.",
+    "Frontend Developer with almost 4 years of experience building web applications using React.js, Next.js, TypeScript and modern technologies.",
   stats: [
     { value: "1000+", label: "Employees impacted" },
     { value: "50+", label: "Pages developed" },

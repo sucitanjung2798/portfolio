@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 import Container from "@/components/Container";
 import Section from "@/components/Section";
@@ -8,7 +8,6 @@ import SectionHeading from "@/components/SectionHeading";
 
 import { projects } from "@/data/projects";
 
-import ProjectFilter from "./ProjectFilter";
 import ProjectGrid from "./ProjectGrid";
 
 export default function FeaturedProjects() {
@@ -16,12 +15,12 @@ export default function FeaturedProjects() {
 
   const featuredProjects = projects.filter((project) => project.featured);
 
-  const categories = useMemo(() => {
-    return [
-      "All",
-      ...new Set(featuredProjects.map((project) => project.category)),
-    ];
-  }, [featuredProjects]);
+  // const categories = useMemo(() => {
+  //   return [
+  //     "All",
+  //     ...new Set(featuredProjects.map((project) => project.category)),
+  //   ];
+  // }, [featuredProjects]);
 
   const filteredProjects =
     selectedCategory === "All"
@@ -38,11 +37,11 @@ export default function FeaturedProjects() {
           description="Selected enterprise applications I've built to solve real business problems."
         />
 
-        <ProjectFilter
+        {/* <ProjectFilter
           categories={categories}
           active={selectedCategory}
           onChange={setSelectedCategory}
-        />
+        /> */}
 
         <ProjectGrid projects={filteredProjects} />
       </Container>

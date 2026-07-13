@@ -1,14 +1,19 @@
 import { Project } from "@/types/project";
-import HrisBanner from "@/assets/banner/hris.png";
+import DashboardImage from "@/assets/banner/hris.png";
+import EmployeeImage from "@/assets/banner/employee.png";
+import LeaveImage from "@/assets/banner/leave.png";
 
 export const projects: Project[] = [
   {
     slug: "hris",
     title: "Enterprise HRIS",
+    images: [DashboardImage, EmployeeImage, LeaveImage],
+    image: DashboardImage,
+    duration: "4",
+    projectType: "Internal Application",
     category: "HRIS",
     description:
       "Enterprise Human Resource Information System designed to streamline employee management, payroll operations, recruitment workflows, salary structures, approvals, and other internal HR processes.",
-    image: HrisBanner,
     company: "Bisa Group",
     period: "Dec 2023 – Present",
     featured: true,
@@ -62,7 +67,10 @@ export const projects: Project[] = [
     category: "Payroll",
     description:
       "Comprehensive payroll management system designed to automate salary calculations, tax deductions, and compliance reporting.",
-    image: HrisBanner,
+    images: [DashboardImage, EmployeeImage, LeaveImage],
+    image: DashboardImage,
+    projectType: "Internal Application",
+    duration: "1.5",
     company: "Bisa Group",
     period: "Jun 2023 – Nov 2023",
     featured: true,
@@ -105,7 +113,10 @@ export const projects: Project[] = [
     category: "Recruitment",
     description:
       "Streamlined recruitment process with a user-friendly interface for managing job postings, candidate applications, and interview scheduling.",
-    image: HrisBanner,
+    images: [DashboardImage, EmployeeImage, LeaveImage],
+    image: DashboardImage,
+    projectType: "Internal Application",
+    duration: "8",
     company: "Bisa Group",
     period: "Jan 2023 – May 2023",
     featured: true,
