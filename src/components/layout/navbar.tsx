@@ -4,10 +4,17 @@ import Container from "@/components/Container";
 
 export default function Navbar() {
   return (
+<<<<<<< HEAD
     <header className="fixed inset-x-0 top-0 z-50 bg-[#EDF4FF]/90 backdrop-blur-md">
       <Container className="flex h-16 items-center justify-between">
         <Link href="/" className="text-lg font-bold">
           SRT.
+=======
+    <header className="sticky top-0 z-50 bg-[#EDF4FF] backdrop-blur-md">
+      <Container className="flex h-16 items-center justify-between">
+        <Link href="/" className="text-lg font-bold">
+          Suci Tanjung
+>>>>>>> 0c7c75581b6d8579a59804eb41fdf84839f51eeb
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
