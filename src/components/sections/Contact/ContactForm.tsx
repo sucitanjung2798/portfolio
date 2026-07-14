@@ -36,7 +36,7 @@ export default function ContactForm() {
 
         <input
           type="text"
-          placeholder="Project Collaboration"
+          placeholder="Frontend Development Project"
           className="h-12 w-full rounded-xl border border-neutral-200 px-4 outline-none transition focus:border-neutral-900"
         />
       </div>
@@ -48,7 +48,7 @@ export default function ContactForm() {
 
         <textarea
           rows={6}
-          placeholder="Tell me about your project or just say hi!"
+          placeholder="Hi Suci! I'm looking for a Frontend Developer to help build our web application..."
           className="w-full resize-none rounded-xl border border-neutral-200 p-4 outline-none transition focus:border-neutral-900"
         />
       </div>
@@ -70,6 +70,7 @@ export default function ContactForm() {
           text-white
           transition
           hover:bg-neutral-800
+          cursor-pointer
         "
       >
         Send Message

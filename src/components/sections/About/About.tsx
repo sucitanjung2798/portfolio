@@ -3,14 +3,13 @@ import { MapPin, BriefcaseBusiness, Globe } from "lucide-react";
 
 import ProfileImage from "@/assets/about-image.png";
 import { about } from "@/data/about";
-import { workPrinciples } from "@/data/work";
 import { techStack } from "@/data/tech-stack";
 import Container from "@/components/Container";
 import Section from "@/components/Section";
 
 export default function About() {
   return (
-    <Section className="bg-[#EDF4FF]" id="about">
+    <Section className="relative flex min-h-[100svh] items-center overflow-hidden bg-[#EDF4FF]" id="about">
       <Container>
         <div>
           {/* Section Label */}
@@ -134,7 +133,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="mt-12">
+          {/* <div className="mt-12">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600">
               How I Work
             </p>
@@ -159,7 +158,7 @@ export default function About() {
                 );
               })}
             </div>
-          </div>
+          </div> */}
         </div>
       </Container>
     </Section>

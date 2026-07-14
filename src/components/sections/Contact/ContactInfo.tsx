@@ -4,26 +4,32 @@ export default function ContactInfo() {
   return (
     <div>
       <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
-        Contact
+        Let's work together
       </p>
 
-      <h2 className="mt-4 text-5xl font-bold leading-tight">
-        Let's build something amazing together.
-      </h2>
+      <div className="grid gap-10 lg:grid-cols-3">
+        <div>
+          <h2 className="mt-4 text-4xl font-bold leading-tight">
+            Have a project in mind? I'd love to hear from you
+          </h2>
+        </div>
 
-      <p className="mt-6 max-w-md text-neutral-600 leading-8">
-        I'm always open to discussing new opportunities, interesting projects,
-        or just having a chat about technology.
-      </p>
+        <div className="flex flex-col gap-4 lg:col-span-2 lg:flex-row">
+          <div className="flex-1">
+            <ContactMethod title="Email" value="sucitanjung2701@gmail.com" />
+          </div>
 
-      <div className="mt-16 space-y-8">
-        <ContactMethod title="Email" value="sucitanjung2701@gmail.com" />
+          <div className="flex-1">
+            <ContactMethod
+              title="LinkedIn"
+              value="linkedin.com/in/sucitjg2701"
+            />
+          </div>
 
-        <ContactMethod title="LinkedIn" value="linkedin.com/in/sucitjg2701" />
-
-        <ContactMethod title="GitHub" value="github.com/sucitanjung2798" />
-
-        <ContactMethod title="Location" value="Medan, Indonesia" />
+          <div className="flex-1">
+            <ContactMethod title="GitHub" value="github.com/sucitanjung2798" />
+          </div>
+        </div>
       </div>
     </div>
   );
