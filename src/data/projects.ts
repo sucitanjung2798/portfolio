@@ -47,13 +47,15 @@ export const projects: Project[] = [
     featured: true,
     technologies: [
       "React",
-      "Next.js",
+      "JavaScript",
       "TypeScript",
       "Redux Toolkit",
       "Tailwind CSS",
       "Axios",
       "React Hook Form",
       "Yup",
+      "Material UI",
+      "Shadcn UI",
     ],
     overview:
       "The HRIS platform was developed to replace fragmented manual processes and multiple third-party tools with one centralized internal system. I was responsible for building and maintaining various frontend modules, integrating REST APIs, and creating reusable components that support employee management, payroll administration, recruitment, approvals, and organizational data",
@@ -92,32 +94,6 @@ export const projects: Project[] = [
     ],
     whatILearned:
       "The project strengthened my ability to build large-scale enterprise applications, design reusable frontend architectures, collaborate with cross-functional teams, and translate complex business processes into intuitive user interfaces.",
-    responsibilities: [
-      "Developed new HRIS features using React.js, Next.js, and TypeScript.",
-      "Built reusable UI components and form architectures.",
-      "Integrated REST APIs with backend services.",
-      "Collaborated with Product Owners, Designers, Backend Engineers, and QA teams.",
-      "Participated in requirement gathering, stakeholder demonstrations, and UAT.",
-      "Performed bug fixing, maintenance, and performance optimization.",
-    ],
-    challenges: [
-      {
-        title: "Complex Dynamic Forms",
-        solution:
-          "Implemented reusable form components using React Hook Form, Yup validation, and TypeScript to handle dynamic form requirements while maintaining type safety.",
-      },
-      {
-        title: "Large Data Tables",
-        solution:
-          "Optimized rendering performance using pagination, debounce search, and virtualized tables to ensure smooth user experience when handling large datasets.",
-      },
-    ],
-    businessImpact: [
-      "Supported approximately 1,000 employees across multiple business units.",
-      "Improved HR operational efficiency through digital workflows.",
-      "Reduced manual data entry and administrative overhead.",
-      "Enhanced consistency and accuracy of employee data management.",
-    ],
     role: "Frontend Developer",
     team: "Product, Backend, UI/UX, QA",
   },
@@ -146,11 +122,15 @@ export const projects: Project[] = [
     featured: true,
     technologies: [
       "React",
-      "Next.js",
+      "JavaScript",
       "TypeScript",
       "Redux Toolkit",
       "Tailwind CSS",
       "Axios",
+      "React Hook Form",
+      "Yup",
+      "Material UI",
+      "Shadcn UI",
     ],
     overview:
       "The Payroll System was developed as part of the company's HR platform to automate payroll operations and reduce manual calculations. I contributed to developing payroll forms, salary structures, dynamic calculations, validation, and backend integration.",
@@ -187,23 +167,6 @@ export const projects: Project[] = [
     ],
     whatILearned:
       "Working on payroll taught me how to build reliable applications for business-critical operations where data accuracy, validation, and user experience are equally important.",
-    responsibilities: [
-      "Implemented core payroll functionalities using React.js, Next.js, and TypeScript.",
-      "Integrated with existing HRIS and accounting systems.",
-      "Conducted code reviews and provided technical guidance to the development team.",
-    ],
-    challenges: [
-      {
-        title: "Complex Payroll Calculations",
-        solution:
-          "Developed a modular calculation engine that handled various payroll rules and regulations while maintaining type safety.",
-      },
-    ],
-    businessImpact: [
-      "Automated payroll processing for over 500 employees.",
-      "Reduced payroll processing time by 60%.",
-      "Improved accuracy in tax deductions and compliance reporting.",
-    ],
     role: "Frontend Developer",
     team: "Product, Backend, UI/UX, QA",
   },
@@ -231,10 +194,9 @@ export const projects: Project[] = [
     featured: true,
     technologies: [
       "React",
-      "Next.js",
-      "TypeScript",
-      "Redux Toolkit",
-      "Tailwind CSS",
+      "JavaScript",
+      "React Context",
+      "Material UI",
       "Axios",
     ],
     overview:
@@ -271,23 +233,6 @@ export const projects: Project[] = [
     ],
     whatILearned:
       "This project improved my understanding of workflow-driven applications and strengthened my ability to design interfaces that support collaboration between multiple stakeholders throughout the recruitment process.",
-    responsibilities: [
-      "Designed and implemented the user interface for the recruitment system.",
-      "Integrated with existing HRIS and email notification services.",
-      "Collaborated with HR stakeholders to gather requirements and provide technical solutions.",
-    ],
-    challenges: [
-      {
-        title: "Candidate Experience",
-        solution:
-          "Created an intuitive user interface that provided a seamless experience for candidates throughout the application process.",
-      },
-    ],
-    businessImpact: [
-      "Reduced time-to-hire by 40%.",
-      "Improved candidate satisfaction scores by 30%.",
-      "Enhanced the overall efficiency of the recruitment process.",
-    ],
     role: "Frontend Developer",
     team: "Product, Backend, UI/UX, QA",
   },

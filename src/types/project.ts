@@ -1,11 +1,6 @@
 import { LucideIcon } from "lucide-react";
 import { StaticImageData } from "next/image";
 
-export interface ProjectChallenge {
-  title: string;
-  solution: string;
-}
-
 export type ResultType = {
   icon: LucideIcon;
   keyValue: string;
@@ -24,8 +19,8 @@ export interface Project {
   projectType: string;
   solutions: string;
   keyFeatures: string[];
-  results: ResultType[]
-  whatILearned: string
+  results: ResultType[];
+  whatILearned: string;
 
   featured: boolean;
 
@@ -35,11 +30,6 @@ export interface Project {
 
   businessProblem: string;
 
-  responsibilities: string[];
-
-  challenges: ProjectChallenge[];
-
-  businessImpact: string[];
   role: string;
   team: string;
   images: StaticImageData[];

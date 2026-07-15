@@ -9,7 +9,10 @@ import Section from "@/components/Section";
 
 export default function About() {
   return (
-    <Section className="relative flex min-h-[100svh] items-center overflow-hidden bg-[#EDF4FF]" id="about">
+    <Section
+      className="relative flex min-h-[100svh] items-center overflow-hidden bg-[#EDF4FF]"
+      id="about"
+    >
       <Container>
         <div>
           {/* Section Label */}
@@ -30,7 +33,9 @@ export default function About() {
               </p>
 
               <p className="mt-4 max-w-xl leading-8 text-neutral-600">
-                I enjoy building clean, responsive, and user-friendly interfaces. I'm passionate about writing maintainable code and continuously learning new technologies. 
+                I enjoy building clean, responsive, and user-friendly
+                interfaces. I'm passionate about writing maintainable code and
+                continuously learning new technologies.
               </p>
 
               {/* Info */}
@@ -60,14 +65,19 @@ export default function About() {
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  {techStack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="rounded-full border border-blue-100 bg-[#fff] px-4 py-2 text-sm font-medium transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-md"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  {techStack.map((tech) => {
+                    const Icon = tech.icon;
+
+                    return (
+                      <span
+                        key={tech.name}
+                        className="flex items-center gap-2 rounded-full border border-blue-100 bg-white px-4 py-2 text-sm font-medium transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-md"
+                      >
+                        <Icon className="text-lg" />
+                        <span>{tech.name}</span>
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             </div>
