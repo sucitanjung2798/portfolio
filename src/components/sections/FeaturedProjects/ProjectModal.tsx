@@ -10,31 +10,36 @@ import {
   LucideFolderClosed,
   LucideUsers,
 } from "lucide-react";
-import ProjectCarousel from "./ProjectCarousel";
+import ProjectUI from "./ProjectUI";
 
 type Props = {
-  project: Project;
+  project: Project | null;
   open: boolean;
   onOpenChange: (open: boolean) => void;
 };
 
 export default function ProjectModal({ project, open, onOpenChange }: Props) {
+  if (!project) return null;
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="w-[95vw] max-w-[1100px] h-[90vh] overflow-y-auto rounded-3xl p-8">
+      <DialogContent className="w-[95vw] max-w-[1100px] h-[90vh] overflow-y-auto rounded-2xl p-5 sm:p-6 lg:p-8 z-[998]">
         <div>
           <span className="inline-flex w-fit h-fit rounded-full bg-blue-100 px-4 py-1 text-base font-semibold text-primary">
             Case Study
           </span>
 
-          <div className="mt-6 font-semibold text-2xl">{project.title}</div>
+          <div className="mt-5 text-2xl font-bold lg:text-3xl">
+            {project.title}
+          </div>
 
-          <div className="grid grid-cols-3 gap-6 mt-6">
-            <div>
-              <p>{project.description}</p>
+          <div className="mt-8 flex flex-col gap-8 lg:grid lg:grid-cols-12">
+            <div className="lg:col-span-5">
+              <p className="leading-7 text-neutral-700">
+                {project.description}
+              </p>
 
               <div className="mt-4 flex flex-col gap-6">
-                <div className="flex items-center gap-4">
+                <div className="flex items-start gap-4">
                   <div className="bg-[#edf4ff] p-2 rounded-full">
                     <LucideCircleUser className="text-primary" />
                   </div>
@@ -44,17 +49,17 @@ export default function ProjectModal({ project, open, onOpenChange }: Props) {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-start gap-4">
                   <div className="bg-[#edf4ff] p-2 rounded-full">
                     <LucideCalendar className="text-primary" />
                   </div>
                   <div className="flex flex-col gap-1">
-                    <div className="font-bold">Role</div>
+                    <div className="font-bold">Duration</div>
                     <div>{`${project.duration} months`}</div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-start gap-4">
                   <div className="bg-[#edf4ff] p-2 rounded-full">
                     <LucideFolderClosed className="text-primary" />
                   </div>
@@ -64,7 +69,7 @@ export default function ProjectModal({ project, open, onOpenChange }: Props) {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-start gap-4">
                   <div className="bg-[#edf4ff] p-2 rounded-full">
                     <LucideUsers className="text-primary" />
                   </div>
@@ -80,7 +85,7 @@ export default function ProjectModal({ project, open, onOpenChange }: Props) {
                   </div>
                   <div className="flex flex-col gap-1">
                     <div className="font-bold">Technologies</div>
-                    <div className="flex max-w-md flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
@@ -95,32 +100,32 @@ export default function ProjectModal({ project, open, onOpenChange }: Props) {
               </div>
             </div>
 
-            <div className="w-full space-y-5 col-span-2">
-              <ProjectCarousel images={project.images} />
+            <div className="space-y-5 lg:col-span-7 overflow-hidden rounded-2xl">
+              <ProjectUI images={project.images} />
             </div>
           </div>
 
           <div className="border-b mt-8" />
 
-          <div className="grid grid-cols-2 gap-8 mt-8">
-            <div className="flex flex-col gap-2">
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+            <div className="flex flex-col gap-2 leading-7 text-neutral-700">
               <div className="text-xl font-semibold">Overview</div>
               <div>{project.overview}</div>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 leading-7 text-neutral-700">
               <div className="text-xl font-semibold">The Problem</div>
               <div>{project.businessProblem}</div>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 leading-7 text-neutral-700">
               <div className="text-xl font-semibold">My Solution</div>
               <div>{project.solutions}</div>
             </div>
 
             <div className="flex flex-col gap-2">
               <div className="text-xl font-semibold">Key Features</div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {project.keyFeatures.map((item, index) => (
                   <div key={index}>
                     <div className="flex items-center gap-2">
@@ -136,13 +141,13 @@ export default function ProjectModal({ project, open, onOpenChange }: Props) {
 
             <div className="bg-[#EDF4FF] p-6 rounded-lg flex flex-col gap-2">
               <div className="text-xl font-semibold">Results</div>
-              <div className="grid grid-cols-3 gap-4 mt-4">
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {project.results.map((item, index) => {
                   const Icon = item.icon;
                   return (
                     <div
                       key={index}
-                      className="flex flex-col items-center text-center gap-2"
+                      className="flex flex-col items-center text-center"
                     >
                       <div className="text-primary">
                         <Icon size={30} />
@@ -157,9 +162,9 @@ export default function ProjectModal({ project, open, onOpenChange }: Props) {
               </div>
             </div>
 
-            <div className="flex flex-col gap-2 bg-[#EDF4FF] rounded-lg p-6">
+            <div className="flex flex-col gap-2 bg-[#EDF4FF] rounded-lg p-6 leading-7 text-neutral-700">
               <div className="text-xl font-semibold">What I Learned</div>
-              <div>{project.overview}</div>
+              <div>{project.whatILearned}</div>
             </div>
           </div>
         </div>

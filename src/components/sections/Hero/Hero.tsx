@@ -29,7 +29,7 @@ export default function Hero() {
   return (
     <Section
       id="hero"
-      className="relative flex min-h-[100svh] items-center overflow-hidden bg-[#EDF4FF] pt-24"
+      className="relative flex min-h-[100svh] items-center overflow-hidden bg-[#EDF4FF] pt-20 md:pt-24"
     >
       {/* Background Decoration */}
       <div className="absolute inset-0 -z-10">
@@ -67,62 +67,36 @@ export default function Hero() {
       </div>
 
       <Container className="h-full flex flex-col">
-        <div className="grid h-full items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid h-full items-center gap-10 md:gap-14 lg:grid-cols-2 lg:gap-20">
           {/* Left */}
           <div>
             <span className="inline-flex rounded-full bg-blue-100 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
               {profile.role}
             </span>
 
-            <h1 className="mt-6 text-5xl font-bold text-slate-900 md:text-7xl">
+            <h1 className="mt-6 text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
               Hi, I'm
             </h1>
 
-            <h1 className="mt-6 text-5xl font-bold md:text-7xl text-primary">
+            <h1 className="mt-2 text-4xl font-bold text-primary sm:text-5xl md:text-6xl lg:text-7xl">
               Suci Tanjung
             </h1>
 
             <p className="mt-8 max-w-xl text-lg leading-8 text-slate-600">
               {profile.description}
             </p>
-
-            {/* <div className="mt-6">
-              <Button className="rounded-md flex items-center gap-2">
-                <div>View Projects</div>
-                <div>
-                  <LucideMoveRight />
-                </div>
-              </Button>
-            </div> */}
-
-            {/* <div className="mt-14 flex flex-wrap gap-3">
-              {[
-                "React",
-                "Next.js",
-                "TypeScript",
-                "Tailwind",
-                "React Query",
-              ].map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm"
-                >
-                  {item}
-                </span>
-              ))}
-            </div> */}
           </div>
 
           {/* Right */}
           <section className="relative flex items-center justify-center">
-            <div className="relative aspect-square w-full max-w-[580px] xl:max-w-[620px]">
+            <div className="relative aspect-square w-full max-w-[300px] sm:max-w-[380px] md:max-w-[460px] lg:max-w-[520px] xl:max-w-[620px]">
               {/* Blob + Image */}
-              <div className="absolute left-1/2 top-1/2 z-10 flex h-[380px] w-[380px] lg:h-[450px] lg:w-[450px] xl:h-[500px] xl:w-[500px] -translate-x-1/2 -translate-y-1/2 items-end justify-center overflow-hidden rounded-[45%_55%_60%_40%/50%_40%_60%_50%] bg-blue-200/50">
+              <div className="absolute left-1/2 top-1/2 z-10 flex h-[260px] w-[260px] sm:h-[320px] sm:w-[320px] md:h-[380px] md:w-[380px] lg:h-[450px] lg:w-[450px] xl:h-[500px] xl:w-[500px] -translate-x-1/2 -translate-y-1/2 items-end justify-center overflow-hidden rounded-[45%_55%_60%_40%/50%_40%_60%_50%] bg-blue-200/50">
                 <Image
                   src={ProfilePicture}
                   alt="Profile"
                   priority
-                  className="h-[360px] lg:h-[430px] xl:h-[480px] w-auto object-contain"
+                  className="h-[240px] sm:h-[300px] md:h-[360px] lg:h-[430px] xl:h-[480px] w-auto object-contain"
                 />
               </div>
 
@@ -147,7 +121,7 @@ export default function Hero() {
               </div>
 
               {/* Decorative Line */}
-              <div className="absolute right-28 top-16 z-30">
+              <div className="absolute right-28 top-16 z-30 hidden md:block">
                 <span className="mb-2 block h-10 w-1 rotate-30 rounded-full bg-blue-500" />
                 <span className="mb-2 ml-6 block h-8 w-1 rotate-45 rounded-full bg-blue-500" />
                 <span className="ml-10 block h-12 w-1 rotate-90 rounded-full bg-blue-500" />
@@ -155,7 +129,7 @@ export default function Hero() {
 
               {/* Curve */}
               <svg
-                className="absolute bottom-28 left-0 z-30"
+                className="absolute bottom-28 left-0 z-30 hidden md:block"
                 width="180"
                 height="180"
                 viewBox="0 0 180 180"
@@ -170,7 +144,7 @@ export default function Hero() {
               </svg>
 
               {/* Right Circle */}
-              <div className="absolute bottom-36 right-8 z-30">
+              <div className="absolute bottom-36 right-8 z-30 hidden md:block">
                 <div className="mb-4 h-8 w-8 rounded-full bg-blue-500" />
                 <div className="ml-14 h-4 w-4 rounded-full bg-blue-400" />
               </div>

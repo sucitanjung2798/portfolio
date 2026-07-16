@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <FeaturedProjects />
+      <FeaturedProjects  />
       <About />
       <Contact />
     </>
