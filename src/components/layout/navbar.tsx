@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-
+import { motion } from "framer-motion";
 import Container from "@/components/Container";
 import { navigation } from "@/constants/navigation";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
-  const [activeSection, setActiveSection] = useState("#hero");
+  const [activeSection, setActiveSection] = useState("#home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -47,7 +47,19 @@ export default function Navbar() {
   return (
     <>
       {/* Header */}
-      <header
+      <motion.header
+        initial={{
+          opacity: 0,
+          y: -20,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.5,
+          delay: 0.2,
+        }}
         className={`fixed inset-x-0 top-0 z-60 transition-all duration-300 ${
           isMenuOpen ? "bg-transparent" : "bg-[#EDF4FF]/90 backdrop-blur-md"
         }`}
@@ -59,7 +71,7 @@ export default function Navbar() {
         >
           {!isMenuOpen && (
             <Link
-              href="/"
+              href="/#home"
               className="relative z-[60] text-lg font-bold text-slate-900"
             >
               SRT.
@@ -89,7 +101,7 @@ export default function Navbar() {
             />
           </button>
         </Container>
-      </header>
+      </motion.header>
 
       {/* Fullscreen Menu */}
       <div

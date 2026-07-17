@@ -9,6 +9,8 @@ import ProjectModal from "./ProjectModal";
 import { useState } from "react";
 import { projects } from "@/data/projects";
 import { Project } from "@/types/project";
+import { motion } from "framer-motion";
+import { cardVariants, containerVariants } from "./animate";
 
 export default function FeaturedProjects() {
   const [openModal, setOpenModal] = useState(false);
@@ -17,24 +19,61 @@ export default function FeaturedProjects() {
   return (
     <Section id="projects">
       <Container>
-        <SectionHeading
-          title="Featured Projects"
-          description="Selected enterprise applications I've built to solve real business problems."
-        />
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.6,
+          }}
+        >
+          <SectionHeading
+            title="Featured Projects"
+            description="Selected enterprise applications I've built to solve real business problems."
+          />
+        </motion.div>
 
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-3 mt-6">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-3 mt-6"
+        >
           {projects.map((project) => (
-            <div key={project.title}>
-              <article className="group overflow-hidden rounded-3xl border border-neutral-200 bg-white transition-all hover:shadow-xl">
+            <motion.div key={project.title} variants={cardVariants}>
+              <motion.article
+                whileHover={{
+                  y: -8,
+                  transition: {
+                    duration: 0.2,
+                  },
+                }}
+                className="group overflow-hidden rounded-3xl border border-neutral-200 bg-white transition-shadow hover:shadow-xl"
+              >
                 {/* Image */}
 
-                <div className="overflow-hidden relative bg-slate-100">
+                <motion.div
+                  whileHover={{
+                    scale: 1.04,
+                  }}
+                  transition={{
+                    duration: 0.4,
+                  }}
+                  className="overflow-hidden relative bg-slate-100"
+                >
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="aspect-[16/10] w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    className="aspect-[16/10] w-full object-contain"
                   />
-                </div>
+                </motion.div>
 
                 {/* Content */}
 
@@ -52,31 +91,48 @@ export default function FeaturedProjects() {
                   </p>
 
                   <div className="mt-6 flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 4).map((tech) => (
-                      <span
+                    {project.technologies.slice(0, 4).map((tech, index) => (
+                      <motion.span
                         key={tech}
-                        className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium whitespace-nowrap"
+                        initial={{
+                          opacity: 0,
+                          scale: 0.8,
+                        }}
+                        whileInView={{
+                          opacity: 1,
+                          scale: 1,
+                        }}
+                        transition={{
+                          delay: index * 0.08,
+                        }}
+                        viewport={{ once: true }}
+                        className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium"
                       >
                         {tech}
-                      </span>
+                      </motion.span>
                     ))}
                   </div>
-
-                  <button
+                  <motion.button
+                    whileHover={{
+                      x: 5,
+                    }}
+                    whileTap={{
+                      scale: 0.96,
+                    }}
                     onClick={() => {
                       setOpenModal(true);
                       setSelectedProject(project);
                     }}
-                    className="mt-6 inline-flex items-center gap-2 font-medium text-blue-600 transition-all hover:gap-3 cursor-pointer"
+                    className="mt-6 inline-flex items-center gap-2 font-medium text-blue-600 cursor-pointer"
                   >
                     View Case Study
                     <ArrowUpRight size={18} />
-                  </button>
+                  </motion.button>
                 </div>
-              </article>
-            </div>
+              </motion.article>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <ProjectModal
           project={selectedProject}
