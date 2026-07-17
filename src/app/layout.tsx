@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -14,15 +13,6 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dm-sans",
 });
-
-export const metadata = {
-  title: "Suci R. Tanjung | Frontend Engineer",
-  description:
-    "Frontend Engineer specializing in React.js, Next.js, TypeScript, and modern web technologies.",
-  icons: {
-    icon: "/images/logo.png",
-  },
-};
 
 export default function RootLayout({
   children,
