@@ -11,7 +11,7 @@ import { profile } from "@/data/profile";
 import ProfilePicture from "@/assets/profile-picture4.png";
 import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
-import { container, fadeLeft, fadeRight, letter } from "./animate";
+import { container, fadeLeft, fadeRight } from "./animate";
 import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
