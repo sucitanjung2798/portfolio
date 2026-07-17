@@ -101,7 +101,7 @@ export default function Hero() {
               animate="visible"
               className="mt-6 text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl"
             >
-              Hi, I'm
+              Hi, I&apos;m
             </motion.h1>
 
             <h1 className="mt-2 text-4xl font-bold text-primary sm:text-5xl md:text-6xl lg:text-7xl">

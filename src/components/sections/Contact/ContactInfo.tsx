@@ -20,7 +20,7 @@ export default function ContactInfo() {
         variants={fadeUp}
         className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600"
       >
-        Let's work together
+        Let&apos;s work together
       </motion.p>
 
       <div className="grid gap-10 lg:grid-cols-3">
@@ -29,7 +29,7 @@ export default function ContactInfo() {
             variants={fadeUp}
             className="mt-4 text-4xl font-bold leading-tight"
           >
-            Have a project in mind? I'd love to hear from you
+            Have a project in mind? I&apos;d love to hear from you
           </motion.h2>
         </div>
 

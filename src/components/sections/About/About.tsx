@@ -49,7 +49,7 @@ export default function About() {
 
               <p className="mt-5 max-w-xl text-base leading-7 text-neutral-600">
                 I enjoy building clean, responsive, and user-friendly
-                interfaces. I'm passionate about writing maintainable code and
+                interfaces. I&apos;m passionate about writing maintainable code and
                 continuously learning new technologies.
               </p>
 
