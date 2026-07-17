@@ -2,9 +2,6 @@ import { notFound } from "next/navigation";
 import {
   CaseStudyHero,
   CaseStudySection,
-  ResponsibilitiesList,
-  ChallengesList,
-  ImpactList,
 } from "@/components/case-study";
 import { projects } from "@/data/projects";
 
