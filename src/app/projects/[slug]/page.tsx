@@ -34,21 +34,6 @@ export default async function ProjectDetailPage({ params }: Props) {
       <CaseStudySection title="Business Problem">
         <p>{project.businessProblem}</p>
       </CaseStudySection>
-
-      {/* Responsibilities */}
-      <CaseStudySection title="My Responsibilities">
-        <ResponsibilitiesList items={project.responsibilities} />
-      </CaseStudySection>
-
-      {/* Challenges */}
-      <CaseStudySection title="Technical Challenges">
-        <ChallengesList challenges={project.challenges} />
-      </CaseStudySection>
-
-      {/* Business Impact */}
-      <CaseStudySection title="Business Impact">
-        <ImpactList items={project.businessImpact} />
-      </CaseStudySection>
     </main>
   );
 }
