@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { fadeUp } from "./animate";
 
 type Props = {
   title: string;
-  value: string;
   href: string;
 };
 
 const icons = {
   LinkedIn: FaLinkedin,
   GitHub: FaGithub,
+  Instagram: FaInstagram
 };
 
-export default function ContactMethod({ title, value, href }: Props) {
+export default function ContactMethod({ title, href }: Props) {
   const Icon = icons[title as keyof typeof icons];
 
   return (
@@ -32,7 +32,7 @@ export default function ContactMethod({ title, value, href }: Props) {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="cursor-pointer flex items-start gap-4 group rounded-2xl border border-transparent p-4 transition-all duration-300 hover:bg-blue-200 hover:-translate-y-1 hover:bg-blue-50/40 hover:shadow-md"
+        className="w-fit cursor-pointer flex items-center gap-4 group"
       >
         <motion.div
           whileHover={{
@@ -46,24 +46,6 @@ export default function ContactMethod({ title, value, href }: Props) {
         >
           <Icon size={20} />
         </motion.div>
-
-        <div>
-          <motion.p
-            initial={{
-              opacity: 0.8,
-            }}
-            whileHover={{
-              x: 4,
-            }}
-            className="font-semibold"
-          >
-            {title}
-          </motion.p>
-
-          <p className="mt-1 text-neutral-600 transition-colors group-hover:text-neutral-900">
-            {value}
-          </p>
-        </div>
       </Link>
     </motion.div>
   );

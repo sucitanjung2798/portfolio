@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import ContactMethod from "./ContactMethod";
-import { Mail } from "lucide-react";
-import { containerVariants, fadeUp } from "./animate";
+import { containerVariants, fadeRight, fadeUp } from "./animate";
+import ContactForm from "./ContactForm";
 
 export default function ContactInfo() {
   return (
@@ -20,65 +20,41 @@ export default function ContactInfo() {
         variants={fadeUp}
         className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600"
       >
-        Let&apos;s work together
+        Let&apos;s Connect
       </motion.p>
 
-      <div className="grid gap-10 lg:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-12 lg:grid-cols-3">
+        {/* Left Content */}
         <div>
           <motion.h2
             variants={fadeUp}
-            className="mt-4 text-4xl font-bold leading-tight"
+            className="text-md leading-relaxed text-neutral-500"
           >
-            Have a project in mind? I&apos;d love to hear from you
+            If you ever want to grab a coffee or just want a quick chat, you can
+            find me on social media or simply send me a message here!
           </motion.h2>
-        </div>
 
-        <motion.div
-          variants={containerVariants}
-          className="flex flex-col gap-4 lg:col-span-2 lg:flex-row"
-        >
-          <div className="flex-1">
-            <motion.a
-              variants={fadeUp}
-              whileHover={{
-                y: -6,
-                scale: 1.02,
-              }}
-              whileTap={{
-                scale: 0.98,
-              }}
-              className="cursor-pointer flex items-start gap-4 group rounded-2xl border border-transparent p-4 transition-all duration-300 hover:bg-blue-200 hover:-translate-y-1 hover:bg-blue-50/40 hover:shadow-md"
-              href="mailto:sucitanjung2798@gmail.com"
-            >
-              <div className="mt-1 rounded-full border border-blue-500 p-3 text-primary transition-all duration-300 group-hover:scale-105 group-hover:bg-blue-500 group-hover:text-white">
-                <Mail size={20} />
-              </div>
+          <motion.div className="mt-8 flex flex-wrap items-center gap-8 justify-center">
+            <ContactMethod
+              title="Instagram"
+              href="https://www.instagram.com/"
+            />
 
-              <div>
-                <p className="font-semibold">Email</p>
-
-                <p className="mt-1 text-neutral-600 transition-colors group-hover:text-neutral-900">
-                  sucitanjung2701@gmail.com
-                </p>
-              </div>
-            </motion.a>
-          </div>
-
-          <div className="flex-1">
             <ContactMethod
               title="LinkedIn"
-              value="linkedin.com/in/sucitjg2701"
               href="https://www.linkedin.com/in/sucitjg2701"
             />
-          </div>
 
-          <div className="flex-1">
             <ContactMethod
               title="GitHub"
-              value="github.com/sucitanjung2798"
               href="https://github.com/sucitanjung2798"
             />
-          </div>
+          </motion.div>
+        </div>
+
+        {/* Right Content */}
+        <motion.div variants={fadeRight} className="lg:col-span-2">
+          <ContactForm />
         </motion.div>
       </div>
     </motion.div>

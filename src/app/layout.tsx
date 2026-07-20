@@ -1,7 +1,7 @@
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-
+import { Toaster } from "@/components/ui/sonner";
 import { Outfit, DM_Sans } from "next/font/google";
 
 const outfit = Outfit({
@@ -25,7 +25,7 @@ export default function RootLayout({
         <Navbar />
 
         <main className="flex-1">{children}</main>
-
+        <Toaster richColors />
         <Footer />
       </body>
     </html>
