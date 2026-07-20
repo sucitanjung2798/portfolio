@@ -34,7 +34,7 @@ export default function Hero() {
   return (
     <Section
       id="hero"
-      className="relative flex min-h-[100svh] items-center overflow-hidden bg-[#EDF4FF] pt-20 md:pt-24"
+      className="relative min-h-screen overflow-hidden bg-[#EDF4FF] pt-24 pb-12 lg:pt-28 lg:pb-20"
     >
       {/* Background Decoration */}
       <div className="absolute inset-0 -z-10">
@@ -82,8 +82,8 @@ export default function Hero() {
         </svg>
       </div>
 
-      <Container className="h-full flex flex-col">
-        <div className="grid h-full items-center gap-10 md:gap-14 lg:grid-cols-2 lg:gap-20">
+      <Container className="flex flex-col">
+        <div className="grid items-center gap-10 md:gap-14 lg:grid-cols-2 lg:gap-20">
           {/* Left */}
           <motion.div variants={container} initial="hidden" animate="visible">
             <motion.span
@@ -236,7 +236,7 @@ export default function Hero() {
             duration: 0.5,
           }}
           href="#projects"
-          className={`mb-4 self-center absolute bottom-[max(16px,env(safe-area-inset-bottom))] left-1/2 z-50 -translate-x-1/2 rounded-full border border-blue-100 bg-[#fff] p-3 shadow-lg transition-all duration-300 hover:-translate-x-1/2 hover:scale-110 hover:shadow-xl
+          className={`mb-4 self-center absolute bottom-5 left-1/2 z-50 -translate-x-1/2 rounded-full border border-blue-100 bg-[#fff] p-3 shadow-lg transition-all duration-300 hover:-translate-x-1/2 hover:scale-110 hover:shadow-xl
     ${
       showArrow ? "animate-bounce opacity-100" : "pointer-events-none opacity-0"
     }

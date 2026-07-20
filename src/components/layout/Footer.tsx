@@ -1,6 +1,5 @@
 import Container from "../Container";
 
-
 export default function Footer() {
   return (
     <footer className="border-t border-border py-10 bg-[#3b82f6]">

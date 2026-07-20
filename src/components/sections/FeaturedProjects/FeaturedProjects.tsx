@@ -17,7 +17,7 @@ export default function FeaturedProjects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <Section id="projects">
+    <Section id="projects" className="bg-[#EDF4FF]">
       <Container>
         <motion.div
           initial={{
