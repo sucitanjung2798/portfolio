@@ -14,15 +14,6 @@ const dmSans = DM_Sans({
   variable: "--font-dm-sans",
 });
 
-export const metadata = {
-  title: "Suci R. Tanjung | Frontend Engineer",
-  description:
-    "Frontend Engineer specializing in React.js, Next.js, TypeScript, and modern web technologies.",
-  icons: {
-    icon: "/images/logo.png",
-  },
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
