@@ -3,6 +3,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import { Outfit, DM_Sans } from "next/font/google";
+import type { Metadata } from "next";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -13,6 +14,11 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dm-sans",
 });
+
+export const metadata: Metadata = {
+  title: "Suci",
+  description: "Frontend Developer Portfolio",
+};
 
 export default function RootLayout({
   children,
